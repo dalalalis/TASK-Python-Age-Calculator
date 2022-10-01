@@ -1,11 +1,11 @@
 
 
-import datetime as dt 
+import datetime 
 def get_dob():
-	birth_year= int(input('enter your birth year:'))
-	birth_month= int(input('enter your birth month:'))
-	birth_day= int(input('enter birth day:')) 
-	dob=dt.date(birth_year,birth_month,birth_day)
+	birth_year= input("which year were you born?")
+	birth_month=input("which month were you born ?")
+	birth_day=input("in which day of the month were you bonrn?")
+	dob=datetime.date(birth_year,birth_month,birth_day)
 	print(dob)
 	return (dob.year)
 
@@ -18,22 +18,22 @@ def get_dob():
 def get_age(dob):
 	import datetime
 	today= datetime.date.today()
-	age= today.year -dob.year
+	age= today.year - get_dob
 	
-	return (age)
+	print (age)
 
 	
-#(get_age(get_dob()))
+(get_age(get_dob))
 
 
 
 # write code here
 def main():
 	import datetime
-	date_year= datetime.date.today().year
-	dob=get_dob()
-	age= get_age(dob)
-	if get_dob.year < date_year:
+	dobyear=get_dob()
+	age=get_age(dob) 
+	date_year= datetime.date.year.today()
+	if dobyear< date_year:
 		return (age)
 	else:
 		print ("invalid date of birth")
