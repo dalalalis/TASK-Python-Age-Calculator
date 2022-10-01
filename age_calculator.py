@@ -7,7 +7,8 @@ def get_dob():
 	birth_day=input("in which day of the month were you bonrn?")
 	dob=datetime.date(birth_year,birth_month,birth_day)
 	print(dob)
-	return (dob.year)
+	dob=dob.year
+	return (dob)
 
     # write code here
 #get_dob()
@@ -15,32 +16,31 @@ def get_dob():
 
 
 
-def get_age(dob):
+def get_age (dob):
+	dob-int(dob)
 	import datetime
 	today= datetime.date.today()
-	age= today.year - get_dob
-	
+	age= today.year - dob
 	print (age)
 
 	
-(get_age(get_dob))
 
 
 
 # write code here
 def main():
 	import datetime
-	dobyear=get_dob()
+	dob=get_dob()
 	age=get_age(dob) 
 	date_year= datetime.date.year.today()
-	if dobyear< date_year:
+	if dob< date_year:
 		return (age)
 	else:
 		print ("invalid date of birth")
 
 	
+print (main())
 
 
-
-if __name__ == '__main__':
-    main()
+#if __name__ == '__main__':
+    #main()
